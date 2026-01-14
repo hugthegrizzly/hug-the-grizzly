@@ -1,0 +1,273 @@
+@font-face {
+  font-family: 'Baloo 2';
+  src: url(assets/Baloo_2.ttf);
+}
+
+/* Clear styles */
+* {
+  padding: 0;
+  margin: 0;
+
+  text-decoration: none;
+  list-style: none;
+
+  color: unset;
+  /* all: unset; */
+/* 
+  border: solid 1px rgb(0, 0, 0); */
+}
+
+body {
+  background-color: #2B2C66;
+  font-family: 'Baloo 2', sans-serif;
+  cursor: url(), default;
+}
+.notice {
+  position: fixed;
+  display: flex;
+  top: 92%;
+  left: 63%;
+  margin: -150px -500px;
+  width: 500px;
+  height: 150px;
+
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.25;
+
+  background-color: #cbccff44;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px 4px #cbccff;
+  backdrop-filter: blur(10px);
+}
+
+/* Font styling */
+  header {
+    text-transform: lowercase;
+  }
+  .banner h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+  }
+  .banner p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8F90D3;
+  }
+  .main-nav a {
+    font-size: 22px;
+    font-weight: 800;
+    color: #373868;
+  }
+  section .heading {
+    line-height: 1;
+    font-size: 20px;
+    color: #8F90D3;
+    font-weight: 700;
+  }
+
+  article h3 {
+    font-size: 32px;
+    color: white;
+    line-height: 120%;
+  }
+  article p {
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #A7A8FF;
+  }
+  article .tags {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-wrap-mode: nowrap;
+  }
+  small {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+/* Logo */
+  header .logo {
+    height: 87px;
+    -webkit-user-drag: none;
+  }
+  footer .logo {
+    height: 43px;
+    -webkit-user-drag: none;
+  }
+
+/* Background graphics */
+  header {
+    background: #474897; /* replace with clouds */
+  }
+  footer {
+    background: #474897; /* replace with clouds */
+  }
+
+
+.banner {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  max-width: 510px;
+  user-select: none;
+  text-wrap-mode: nowrap;
+  line-height: 1;
+  gap: 8px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.banner .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.banner .bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.main-nav a {
+  background: #CBCCFF;
+  padding: 4px 12px;
+  border-radius: 25px;
+  /* replace with blob graphics */
+}
+.main-nav .active {
+  background: #EDEEFF; /* replace with blob graphics */
+}
+
+
+.container-carousel {
+  margin-block: 100px;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(50% 50% at 50% 50%, #474897 11.54%, #2E2F6B 73.08%, #2B2C66 100%);
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel li {
+  height: fit-content;
+  border: solid 12px #474897;
+  border-radius: 24px;
+  background-color: #47489700;
+}
+.carousel .active {
+  height: 460px;
+  border-radius: 14px;
+}
+.carousel .prev {
+  border-right: 0;
+  border-radius: 16px 0px 0px 16px;
+}
+.carousel .next {
+  border-left: 0;
+  border-radius: 0px 16px 16px 0px;
+}
+.carousel img {
+  height: 260px;
+  border-radius: 14px;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  align-items: center;
+  max-width: 750px;
+  margin: auto;
+}
+section .heading {
+  display: flex;
+  justify-content: center;
+  background-color: #474897;
+  user-select: none;
+  padding: 8px 20px;
+  border-radius: 27px;
+}
+section .button {
+  background-color: #C484DE;
+  color: white;
+}
+article {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 27px 23px;
+  border-radius: 35px;
+  background-color: #474897;
+}
+article img {
+  object-fit: cover;
+  object-position: center;
+  width: 294px;
+  height: 204px;
+  border: solid 5px white;
+  border-radius: 18px;
+  box-shadow: 4px 4px 0px white;
+}
+article .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+article .tags {
+  display: flex;
+  gap: 10px;
+}
+article li {
+  border-radius: 10px;
+  padding: 2px 12px;
+}
+article .category {
+  background-color: #696BC0;
+}
+article .date {
+  background-color: #C484DE;
+  cursor: default;
+}
+
+
+footer {
+  margin-top: 140px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+footer .watermark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  filter: drop-shadow(4px 4px #2b2c66);
+}
+footer .socials img {
+  width: 32px;
+  object-fit: contain;
+}
