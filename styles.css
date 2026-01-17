@@ -13,8 +13,7 @@
 
   color: unset;
   /* all: unset; */
-/* 
-  border: solid 1px rgb(0, 0, 0); */
+  /* border: solid 1px rgb(0, 0, 0); */
 }
 
 body {
@@ -24,13 +23,13 @@ body {
 }
 .notice {
   position: fixed;
-  display: flex;
-  top: 92%;
-  left: 63%;
-  margin: -150px -500px;
+  left: 50%;
+  top: 88%;
+  translate: -50% -50%;
   width: 500px;
   height: 150px;
 
+  display: flex;
   color: white;
   font-weight: 600;
   font-size: 26px;
@@ -46,12 +45,9 @@ body {
 }
 
 /* Font styling */
-  header {
-    text-transform: lowercase;
-  }
   .banner h1 {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 800;
     color: white;
   }
   .banner p {
@@ -60,7 +56,8 @@ body {
     color: #8F90D3;
   }
   .main-nav a {
-    font-size: 22px;
+    text-transform: lowercase;
+    font-size: 23px;
     font-weight: 800;
     color: #373868;
   }
@@ -96,7 +93,7 @@ body {
 
 /* Logo */
   header .logo {
-    height: 87px;
+    height: 75px;
     -webkit-user-drag: none;
   }
   footer .logo {
@@ -106,7 +103,8 @@ body {
 
 /* Background graphics */
   header {
-    background: #474897; /* replace with clouds */
+    /* background-image: url(assets/banner-illustration_htg-2026.jpg); */
+    background-color: #474897; /* replace with clouds */
   }
   footer {
     background: #474897; /* replace with clouds */
@@ -141,15 +139,29 @@ body {
   display: flex;
   justify-content: center;
   gap: 2%;
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 20px;;
 }
 .main-nav a {
-  background: #CBCCFF;
-  padding: 4px 12px;
-  border-radius: 25px;
-  /* replace with blob graphics */
+  display: block;
+  position: relative;
+  transition-duration: 0.05s;
 }
-.main-nav .active {
-  background: #EDEEFF; /* replace with blob graphics */
+    .main-nav a:hover {
+      translate: 2px 2px;
+    }
+.main-nav p {
+  display: block;
+  position: absolute;
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  translate: -52% -52%;
+}
+.main-nav img {
+  height: 60px;
+  display: block;
 }
 
 
@@ -158,6 +170,7 @@ body {
   display: flex;
   justify-content: center;
   background: radial-gradient(50% 50% at 50% 50%, #474897 11.54%, #2E2F6B 73.08%, #2B2C66 100%);
+  background-size: 100% 100%;
 }
 .carousel {
   display: flex;
@@ -165,13 +178,19 @@ body {
   align-items: center;
 }
 .carousel li {
-  height: fit-content;
+  height: auto;
   border: solid 12px #474897;
   border-radius: 24px;
-  background-color: #47489700;
+  background-color: #474897;
 }
 .carousel .active {
   height: 460px;
+  display: block;
+  border-radius: 14px;
+}
+.carousel img {
+  display: block;
+  height: 260px;
   border-radius: 14px;
 }
 .carousel .prev {
@@ -181,10 +200,6 @@ body {
 .carousel .next {
   border-left: 0;
   border-radius: 0px 16px 16px 0px;
-}
-.carousel img {
-  height: 260px;
-  border-radius: 14px;
 }
 
 

@@ -21,15 +21,28 @@
           <h1>Hug the Grizzly</h1>
         </div>
         <div class="bottom">
-          <p>a blog by Kamilla</p>
+          <p>a blog about art and games</p>
         </div>
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Art</a></li>
-          <li><a href="#">Posts</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">
+            <p>Home</p>
+            <img src="assets/nav-1_active.png"/>
+            </a>
+          </li>
+          <li><a href="#" style="margin-top: 6px;">
+            <p>Art</p>
+            <img src="assets/nav-2.png"/></a>
+          </li> <!--Art-->
+          <li><a href="#">
+            <p>Posts</p>
+            <img src="assets/nav-3.png"/></a>
+          </li> <!--Posts-->
+          <li><a href="#" style="margin-top: 6px;">
+            <p>About</p>
+            <img src="assets/nav-4.png"/></a>
+          </li> <!--About-->
           <!-- <li><a href="#"><img></a></li> -->
         </ul>
       </nav>
@@ -39,7 +52,12 @@
       <div class="container-carousel"> <!--Carousel-->
         <ul class="carousel">
           <li class="prev"><img src="assets/carousel/2.jpg"></li>
-          <li><video class="active" autoplay loop type="video/mp4" src="assets/carousel/1.mp4"></li>
+          <li>
+            <video class="active" autoplay loop>
+              <source  src="assets/carousel/1.mp4" type="video/mp4">
+              <img class="active" src="assets/carousel/1-unsupported.png"/>
+            </video>
+          </li>
           <li class="next"><img src="assets/carousel/3.jpg"></li>
         </ul>
         <div> <!--Render behind carousel-->
@@ -106,9 +124,9 @@
         <small>Hug the Grizzly</small>
       </div>
       <ul class="socials">
-        <li><a href="https://www.instagram.com/hug_the_grizzly"><img src="assets/socials-1.webp"></a></li>
-        <li><a href="https://www.youtube.com/@kamshifter"><img src="assets/socials-2.png"></a></li>
-        <li><a href="https://www.twitch.tv/kamshifter"><img src="assets/socials-3.png"></a></li>
+        <li><a target="_blank" https://www.instagram.com/hug_the_grizzly"><img src="assets/socials-1.webp"></a></li>
+        <li><a target="_blank" href="https://www.youtube.com/@kamshifter"><img src="assets/socials-2.png"></a></li>
+        <li><a target="_blank" href="https://www.twitch.tv/kamshifter"><img src="assets/socials-3.png"></a></li>
       </ul>
     </footer>
   </body>
