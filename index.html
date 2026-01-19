@@ -2,132 +2,80 @@
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name = "description" content="Blog about art and games"/>
+    <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
+    <title>Hug the Grizzly! &#8211 Blog</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/htg-flower-logo.svg">
-    <meta name="description" content="A blog about art and games">
-    <meta name="keywords" content="art, gaming, dev">
-    <meta name="author" content="John Doe">
-    <title>Hug the Grizzly — Blog</title>
   </head>
   <body>
-    <!--Human-made with love, by Kamilla-->
-    <p class="notice">Hi! You're here early, <br> this site is under construction. <br> Come back soon :D</p>
-    <header> <!--Add cloud bg-->
-      <div class="banner">
-        <div class="top">
-          <img class="logo" src="assets/htg-flower-logo.svg">
-          <h1>Hug the Grizzly</h1>
+    <div class="nav-mobile" style="display: none;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">About</a></li>
+    </div>
+    <div class="banner">
+      <img src="assets/htg-flower-logo.svg"/>
+      <h1>Hug the Grizzly!</h1>
+    </div>
+    <div class="container">
+      <header>
+        <div class="nav-desktop" style="display: none;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">About</a></li>
         </div>
-        <div class="bottom">
-          <p>a blog about art and games</p>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">
-            <p>Home</p>
-            <img src="assets/nav-1_active.png"/>
-            </a>
-          </li>
-          <li><a href="#" style="margin-top: 6px;">
-            <p>Art</p>
-            <img src="assets/nav-2.png"/></a>
-          </li> <!--Art-->
-          <li><a href="#">
-            <p>Posts</p>
-            <img src="assets/nav-3.png"/></a>
-          </li> <!--Posts-->
-          <li><a href="#" style="margin-top: 6px;">
-            <p>About</p>
-            <img src="assets/nav-4.png"/></a>
-          </li> <!--About-->
-          <!-- <li><a href="#"><img></a></li> -->
-        </ul>
-      </nav>
-    </header>
-    
-    <main>
-      <div class="container-carousel"> <!--Carousel-->
-        <ul class="carousel">
-          <li class="prev"><img src="assets/carousel/2.jpg"></li>
-          <li>
-            <video class="active" autoplay loop>
-              <source  src="assets/carousel/1.mp4" type="video/mp4">
-              <img class="active" src="assets/carousel/1-unsupported.png"/>
-            </video>
-          </li>
-          <li class="next"><img src="assets/carousel/3.jpg"></li>
-        </ul>
-        <div> <!--Render behind carousel-->
-          <nav>
-            <ul> <!--Carousel nav. arrows-->
-              <li><img></li> <!--Left-->
-              <li><img></li> <!--Right-->
-            </ul>
-          </nav>
-        </div>
-        <nav> <!--Carousel nav. list-->
+        <nav><ul>
+        </ul></nav>
+      </header>
+
+      <main>
+        <div class="container-carousel">
           <ul>
-            <li></li>
+            <li class="carousel-item"><video autoplay loop><source type="video/mp4" src="assets/carousel/1.mp4"></video></li>
             <li></li>
             <li></li>
           </ul>
-        </nav>
-      </div>
-
-      <section>
-        <h2 class="heading">Posts</h2>
-
-        <article>
-          <a href="#"><img src="posts/thumbnails/1.png" alt="Thumb desc"></a>
-          <div class="description">
-            <a href="#"><h3>Post title</h3></a>
-            <p>Post blurb post blurb  post blurb post blurb post blurb.</p>
-            <ul class="tags">
-              <li class="category"><a href="#">Category</a></li>
-              <li class="date">14 Jan 2026</li>
+          <div class="carousel-nav">
+              <div class="nav-indicator active"></div>
+              <div class="nav-indicator"></div>
+              <div class="nav-indicator"></div>
+            </ul>
           </div>
-        </article>
+        </div>
+        
+        <div class="container-posts">
+          <h2 class="section-heading">Posts</h2>
+          <section>
+            <article>
+              <h3>Hello!</h3>
+              <img src="posts/thumbnails/2.jpg" role="thumb"/>
+              <p> You're here early, this site is under construction. Come back soon :D</p>
+              <ul class="tagline">
+                <li class="tag"><a>Blog</a></li>
+                <li class="tag">19 Jan 2026</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </main>
 
-        <article>
-          <a href="#"><img src="posts/thumbnails/1.png" alt="Thumb desc"></a>
-          <div class="description">
-            <a href="#"><h3>Post title</h3></a>
-            <p>Post blurb post blurb  post blurb post blurb post blurb.</p>
-            <ul class="tags">
-              <li class="category"><a href="#">Category</a></li>
-              <li class="date">14 Jan 2026</li>
-          </div>
-        </article>
-
-        <article>
-          <a href="#"><img src="posts/thumbnails/1.png" alt="Thumb desc"></a>
-          <div class="description">
-            <a href="#"><h3>Post title</h3></a>
-            <p>Post blurb post blurb  post blurb post blurb post blurb.</p>
-            <ul class="tags">
-              <li class="category"><a href="#">Category</a></li>
-              <li class="date">14 Jan 2026</li>
-          </div>
-        </article>
-
-        <a class="heading button" href="#">Read more</a>
-      </section>
-    </main>
-
-
-    <footer> <!--Add cloud bg-->
-      <div class="watermark">
-        <img class="logo" src="assets/htg-flower-logo.svg">
-        <small>Hug the Grizzly</small>
-      </div>
-      <ul class="socials">
-        <li><a target="_blank" https://www.instagram.com/hug_the_grizzly"><img src="assets/socials-1.webp"></a></li>
-        <li><a target="_blank" href="https://www.youtube.com/@kamshifter"><img src="assets/socials-2.png"></a></li>
-        <li><a target="_blank" href="https://www.twitch.tv/kamshifter"><img src="assets/socials-3.png"></a></li>
-      </ul>
-    </footer>
+      <footer>
+        <div class="top">
+          <img src="assets/htg-flower-logo.svg"/>
+          <small>hug the grizzly!</small>
+        </div>
+        <ul>
+          <li><a href="https://www.instagram.com/hug_the_grizzly" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@kamshifter" target="_blank">YouTube</a></li>
+          <li><a href="https://www.twitch.tv/kamshifter" target="_blank">Twitch</a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
+
 </html>
