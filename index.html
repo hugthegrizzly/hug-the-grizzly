@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name = "description" content="Blog about art and games"/>
     <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
-    <title>Hug the Grizzly! &#8211 Blog</title>
+    <title>Hug the Grizzly &#8211 Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/htg-flower-logo.svg">
+    <link rel="icon" href="assets/htg-flower-favicon.svg">
   </head>
   <body>
     <div class="nav-mobile" style="display: none;">
@@ -17,10 +17,13 @@
           <li><a href="#">Posts</a></li>
           <li><a href="#">About</a></li>
     </div>
-    <div class="banner">
-      <img src="assets/htg-flower-logo.svg"/>
-      <h1>Hug the Grizzly!</h1>
-    </div>
+    <header class="topbar">
+      <img id="nav-menu" src="assets/nav-menu-icon.png" role="button">
+      <div class="banner">
+        <img src="assets/htg-flower-logo.svg"/>
+        <h1>Hug the Grizzly</h1>
+      </div>
+    </header>
     <div class="container">
       <header>
         <div class="nav-desktop" style="display: none;">
@@ -36,7 +39,10 @@
       <main>
         <div class="container-carousel">
           <ul>
-            <li class="carousel-item"><video autoplay loop><source type="video/mp4" src="assets/carousel/1.mp4"></video></li>
+            <li class="carousel-item">
+              <video autoplay loop><source type="video/mp4" src="assets/carousel/1.mp4">
+                <img src="assets/carousel/1-unsupported.png" alt="Stylized purple bat with kind glowing eyes">
+            </video></li>
             <li></li>
             <li></li>
           </ul>
@@ -52,13 +58,15 @@
           <h2 class="section-heading">Posts</h2>
           <section>
             <article>
-              <h3>Hello!</h3>
-              <img src="posts/thumbnails/2.jpg" role="thumb"/>
-              <p> You're here early, this site is under construction. Come back soon :D</p>
+              <h3><a href="posts/first-post.html">First Blogpost</a></h3>
+              <a href="posts/first-post.html">
+                <img src="posts/thumbnails/2.jpg" role="thumb"/>
+              </a>
               <ul class="tagline">
                 <li class="tag"><a>Blog</a></li>
                 <li class="tag">19 Jan 2026</li>
               </ul>
+              <p> You're here early, this site is under construction. Come back soon :D</p>
             </article>
           </section>
         </div>
@@ -67,7 +75,6 @@
       <footer>
         <div class="top">
           <img src="assets/htg-flower-logo.svg"/>
-          <small>hug the grizzly!</small>
         </div>
         <ul>
           <li><a href="https://www.instagram.com/hug_the_grizzly" target="_blank">Instagram</a></li>
