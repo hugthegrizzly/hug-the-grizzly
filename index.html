@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,20 +11,23 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/htg-flower-favicon.svg">
   </head>
+
   <body>
-    <div class="nav-mobile" style="display: none;">
+    <div id="nav-mobile">
           <li><a href="#">Home</a></li>
           <li><a href="#">Art</a></li>
           <li><a href="#">Posts</a></li>
           <li><a href="#">About</a></li>
     </div>
+
     <header class="topbar">
-      <img id="nav-menu" src="assets/nav-menu-icon.png" role="button">
+      <button id="nav-menu" onclick="openNav()"></button>
       <div class="banner">
         <img src="assets/htg-flower-logo.svg"/>
         <h1>Hug the Grizzly</h1>
       </div>
     </header>
+
     <div class="container">
       <header>
         <div class="nav-desktop" style="display: none;">
@@ -85,4 +89,15 @@
     </div>
   </body>
 
+  <script>
+    function openNav() {
+      var x = document.getElementById("nav-mobile")
+      if (x.style.display == "none") {
+        x.style.display = "flex";
+      }
+      else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 </html>
