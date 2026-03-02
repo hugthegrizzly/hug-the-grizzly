@@ -33,7 +33,7 @@ body {
   background-color: #2B2C66;
 }
 
-.topbar {
+#topbar {
   min-width: 300px;
   width: 100vw;
   display: flex;
@@ -47,7 +47,7 @@ body {
   user-select: none;
 }
 @media (min-width: 768px) {
-  .topbar {
+  #topbar {
     display: none;
   }
 }
@@ -60,17 +60,16 @@ body {
   margin-left: -10px;
 }
 #nav-menu {
-  position:absolute;
+  position:fixed;
   border: none;
   background-image: url(assets/nav-menu-icon.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  cursor:pointer;
   background-color: #C484DE;
+  cursor:pointer;
   height: 20px;
   width: 20px;
-  -webkit-user-drag: none;
 }
 .banner img {
   display: block;
@@ -95,18 +94,28 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100%;
-
 }
+
 #nav-mobile {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 32px;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #e194ff;
+  background-color: #C484DE;
+}
+#nav-mobile a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+#nav-mobile .current-page {
+  background-color: #8e82ff;
+  padding: 5px 12px;
+  border-radius: 20px;
 }
 
 .nav-desktop {
@@ -120,7 +129,7 @@ main {
 }
 
 .container-posts {
-  padding-block: 30px 40px;
+  padding-block: 30px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,6 +199,13 @@ article p {
   border-radius: 24px;
   overflow: hidden;
 }
+
+.carousel-item video {
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+
 .carousel-nav {
   padding: 14px 0px;
   display: flex;
@@ -214,6 +230,7 @@ footer {
   align-items: center;
   gap: 8px;
   max-width: 375px; /*temporary*/
+  padding-top: 40px;
 }
 footer .top {
   margin-left: -15px;

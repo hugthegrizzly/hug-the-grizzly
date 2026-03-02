@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name = "description" content="Blog about art and games"/>
     <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
-    <title>Hug the Grizzly &#8211 Blog</title>
+    <title>Hug the Grizzly &#8211; Blog</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/htg-flower-favicon.svg">
   </head>
 
   <body>
     <div id="nav-mobile">
-          <li><a href="#">Home</a></li>
+          <li><a class="current-page" href="index.html">Home</a></li>
           <li><a href="#">Art</a></li>
           <li><a href="#">Posts</a></li>
           <li><a href="#">About</a></li>
     </div>
 
-    <header class="topbar">
+    <header id="topbar">
       <button id="nav-menu" onclick="openNav()"></button>
       <div class="banner">
         <img src="assets/htg-flower-logo.svg"/>
@@ -41,12 +41,14 @@
       </header>
 
       <main>
-        <div class="container-carousel">
+        <div class="container-carousel"> <!-- Use Swiper.js -->
           <ul>
             <li class="carousel-item">
-              <video autoplay loop><source type="video/mp4" src="assets/carousel/1.mp4">
+              <img src="assets/carousel/2.jpg">
+              <!-- <video autoplay loop><source type="video/mp4" src="assets/carousel/1.mp4">
                 <img src="assets/carousel/1-unsupported.png" alt="Stylized purple bat with kind glowing eyes">
-            </video></li>
+              </video> -->
+            </li>
             <li></li>
             <li></li>
           </ul>
@@ -91,12 +93,15 @@
 
   <script>
     function openNav() {
-      var x = document.getElementById("nav-mobile")
-      if (x.style.display == "none") {
-        x.style.display = "flex";
+      var mobile_menu = document.getElementById("nav-mobile"), style = window.getComputedStyle(mobile_menu)
+      var topbar = document.getElementById("topbar")
+      if (mobile_menu.style.display == "" ||  mobile_menu.style.display == "none") {
+        mobile_menu.style.display = "flex";
+        topbar.style.boxShadow = "none";
       }
       else {
-        x.style.display = "none";
+        mobile_menu.style.display = "none";
+        topbar.style.boxShadow = "0px 0px 36px rgba(0, 0, 0, 0.35)";
       }
     }
   </script>
