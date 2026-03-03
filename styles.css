@@ -1,5 +1,9 @@
 
 /* Clear base styles */
+:root {
+  --swiper-pagination-color: #e194ff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,12 +49,22 @@ body {
   background-color: #C484DE;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.35);
   user-select: none;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   #topbar {
     display: none;
   }
 }
+#topbar-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  #topbar-desktop {
+    display: flex;
+  }
+}
+
 .banner {
   display: flex;
   justify-content: center;
@@ -106,16 +120,28 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: #C484DE;
+  z-index: 98;
 }
 #nav-mobile a {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  #nav-mobile a {
+  font-size: 20px;
+  }
 }
 #nav-mobile .current-page {
   background-color: #8e82ff;
+  padding: 8px 24px;
+  border-radius: 32px;
+}
+@media (min-width: 768px) {
+  #nav-mobile .current-page {
   padding: 5px 12px;
   border-radius: 20px;
+  }
 }
 
 .nav-desktop {
@@ -176,7 +202,7 @@ article p {
   padding-block: 2px;
   line-height: normal;
 }
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   article p {
     font-size: 18px;
   }
@@ -194,16 +220,29 @@ article p {
   border-radius: 20px;
 }
 
+/** Swiper.js carousel **/
+.swiper { 
+  width: 100%;
+  height: fit-content;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.swiper-button-prev, .swiper-button-next {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .swiper-button-prev, .swiper-button-next  {
+    display: flex !important;
+  }
+}
+.swiper-slide video {
+  pointer-events: none;
+}
+
 .carousel-item {
   line-height: 0;
   border-radius: 24px;
   overflow: hidden;
-}
-
-.carousel-item video {
-  display: block;
-  position: relative;
-  z-index: -1;
 }
 
 .carousel-nav {
