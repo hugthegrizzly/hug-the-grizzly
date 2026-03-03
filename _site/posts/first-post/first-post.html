@@ -97,21 +97,19 @@
 
   <script>
     function openNav() {
-      var mobile_menu = document.getElementById("nav-mobile")
-      var topbar = document.getElementById("topbar")
-      if (mobile_menu.style.display == "" ||  mobile_menu.style.display == "none") {
+      var mobile_menu = document.getElementById("nav-mobile"),
+        style = window.getComputedStyle(mobile_menu);
+      var topbar = document.getElementById("topbar");
+      if (
+        mobile_menu.style.display == "" ||
+        mobile_menu.style.display == "none"
+      ) {
         mobile_menu.style.display = "flex";
         topbar.style.boxShadow = "none";
-        playAudio();
-      }
-      else {
+      } else {
         mobile_menu.style.display = "none";
         topbar.style.boxShadow = "0px 0px 36px rgba(0, 0, 0, 0.35)";
       }
-    }
-    function playAudio() {
-      var menu_sfx = new Audio("../assets/audio/menu-click.mp3")
-      menu_sfx.play();
     }
   </script>
 </html>
