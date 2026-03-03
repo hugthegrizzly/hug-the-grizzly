@@ -10,13 +10,13 @@
       content="gaming, art, crafts, blog, reviews, 3D, guide"
     />
     <title>Hug the Grizzly &#8211; Blog</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="icon" href="../assets/htg-flower-favicon.svg" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="icon" href="../../../assets/htg-flower-favicon.svg" />
   </head>
 
   <body>
     <div id="nav-mobile">
-      <li><a href="../index.html">Home</a></li>
+      <li><a href="../../index.html">Home</a></li>
       <li><a href="#">Art</a></li>
       <li><a class="current-page" href="#">Posts</a></li>
       <li><a href="#">About</a></li>
@@ -25,20 +25,20 @@
     <header id="topbar">
       <button id="nav-menu" onclick="openNav()"></button>
       <div class="banner">
-        <img src="../assets/htg-flower-logo.svg" />
+        <img src="../../../assets/htg-flower-logo.svg" />
         <h1>Hug the Grizzly</h1>
       </div>
     </header>
 
     <div class="container">
       <main>
-        <a class="section-heading" href="../index.html">
+        <a class="section-heading" href="../../index.html">
           Back to <span class="hyperlink">Posts</span>
         </a>
         <section>
           <article>
             <h3>First Blogpost</h3>
-            <img src="thumbnails/2.jpg" role="thumb" />
+            <img src="../../../posts/thumbnails/2.jpg" role="thumb" />
             <ul class="tagline">
               <li class="tag"><a>Blog</a></li>
               <li class="tag">19 Jan 2026</li>
@@ -72,7 +72,7 @@
 
       <footer>
         <div class="top">
-          <img src="../assets/htg-flower-logo.svg" />
+          <img src="../../../assets/htg-flower-logo.svg" />
         </div>
         <ul>
           <li>
@@ -97,19 +97,21 @@
 
   <script>
     function openNav() {
-      var mobile_menu = document.getElementById("nav-mobile"),
-        style = window.getComputedStyle(mobile_menu);
-      var topbar = document.getElementById("topbar");
-      if (
-        mobile_menu.style.display == "" ||
-        mobile_menu.style.display == "none"
-      ) {
+      var mobile_menu = document.getElementById("nav-mobile")
+      var topbar = document.getElementById("topbar")
+      if (mobile_menu.style.display == "" ||  mobile_menu.style.display == "none") {
         mobile_menu.style.display = "flex";
         topbar.style.boxShadow = "none";
-      } else {
+        playAudio();
+      }
+      else {
         mobile_menu.style.display = "none";
         topbar.style.boxShadow = "0px 0px 36px rgba(0, 0, 0, 0.35)";
       }
+    }
+    function playAudio() {
+      var menu_sfx = new Audio("../../../assets/audio/menu-click.mp3")
+      menu_sfx.play();
     }
   </script>
 </html>
