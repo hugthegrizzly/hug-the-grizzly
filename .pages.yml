@@ -1,0 +1,9 @@
+media:
+  input: src/assets
+  output: _public/assets
+
+content:
+  - name: posts
+    label: Posts
+    path: src/blog
+    type: collection

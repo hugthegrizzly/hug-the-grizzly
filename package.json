@@ -1,9 +1,10 @@
 {
-  "name": "hug-the-grizzly-2026_v2",
+  "name": "hug-the-grizzly",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "eleventy --serve",
+    "dev": "eleventy"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name = "description" content="Blog about art and games"/>
+    <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
+    <title>Hug the Grizzly &#8211; Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/htg-flower-favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/> <!-- Swiper.js CDN link-->
+
+  </head>
+
+  <body>
+    <div id="nav-mobile">
+          <li><a class="current-page" href="index.html">Home</a></li>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">About</a></li>
+    </div>
+
+    <header>
+      <div id="topbar">
+        <button id="nav-menu" onclick="openNav()"></button>
+        <div class="banner">
+          <img src="assets/htg-flower-logo.svg"/>
+          <h1>Hug the Grizzly</h1>
+        </div>
+      </div>
+      <div id="topbar-desktop">
+        
+      </div>
+    </header>
+
+    <div class="container">
+      <header>
+        <div class="nav-desktop" style="display: none;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">About</a></li>
+        </div>
+        <nav><ul>
+        </ul></nav>
+      </header>
+
+      <main>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/carousel/2.jpg">
+            </div>
+            <div class="swiper-slide">
+              <video autoplay loop>
+                <source type="video/mp4" src="assets/carousel/1.mp4">
+                <img src="assets/carousel/1-unsupported.png" alt="Stylized purple bat with kind glowing eyes">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/carousel/3.jpg">
+            </div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        
+        <!-- <div class="container-carousel">
+          <ul>
+            <li class="carousel-item">
+              <img src="assets/carousel/2.jpg">
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="carousel-nav">
+              <div class="nav-indicator active"></div>
+              <div class="nav-indicator"></div>
+              <div class="nav-indicator"></div>
+            </ul>
+          </div>
+        </div> -->
+        
+        <div class="container-posts">
+          <h2 class="section-heading">Posts</h2>
+          <section>
+            <article>
+              <h3><a href="blog/first-post">First Blogpost</a></h3>
+              <a href="blog/first-post">
+                <img src="assets/blog/first-post/thumbnail.jpg" role="thumb"/>
+              </a>
+              <ul class="tagline">
+                <li class="tag"><a>Blog</a></li>
+                <li class="tag">19 Jan 2026</li>
+              </ul>
+              <p> You're here early, this site is under construction. Come back soon :D</p>
+            </article>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div class="top">
+          <img src="assets/htg-flower-logo.svg"/>
+        </div>
+        <ul>
+          <li><a href="https://www.instagram.com/hug_the_grizzly" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@kamshifter" target="_blank">YouTube</a></li>
+          <li><a href="https://www.twitch.tv/kamshifter" target="_blank">Twitch</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    function openNav() {
+      var mobile_menu = document.getElementById("nav-mobile")
+      var topbar = document.getElementById("topbar")
+      if (mobile_menu.style.display == "" ||  mobile_menu.style.display == "none") {
+        mobile_menu.style.display = "flex";
+        topbar.style.boxShadow = "none";
+        playAudio();
+      }
+      else {
+        mobile_menu.style.display = "none";
+        topbar.style.boxShadow = "0px 0px 36px rgba(0, 0, 0, 0.35)";
+      }
+    }
+    function playAudio() {
+      var menu_sfx = new Audio("assets/audio/menu-click.mp3")
+      menu_sfx.play();
+    }
+  </script>
+  
+  <!-- Swiper.js script-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> 
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+</html>
