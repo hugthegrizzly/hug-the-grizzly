@@ -15,9 +15,9 @@ content:
       - name: thumbnail
         label: Thumbnail
         type: image
-      - name: date
+      - name: displayDate
         label: Date
-        type: date
+        type: string
       - name: title
         label: Title
         type: string
