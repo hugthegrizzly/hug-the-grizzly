@@ -17,7 +17,7 @@ content:
         type: image
       - name: displayDate
         label: Date
-        type: date
+        type: string
       - name: title
         label: Title
         type: string
