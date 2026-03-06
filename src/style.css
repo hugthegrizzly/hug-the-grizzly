@@ -174,7 +174,7 @@ main {
 }
 section {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -217,6 +217,7 @@ article p {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  margin-block: -10px; /**adjusting flex gap**/
 }
 .tag {
   font-weight: 600;
@@ -224,6 +225,12 @@ article p {
   background-color: #C484DE;
   padding: 6px 15px;
   border-radius: 20px;
+}
+.post-body {
+  padding-top: 10px;
+}
+.post-body p {
+  padding-block: 8px;
 }
 
 /** Swiper.js carousel **/

@@ -1,6 +1,6 @@
 Learning notes for the "blog" directory
 
-# "blog.json"
+# "posts.json"
 Creating an 11ty collection that applies (tags) to all files in directory
 Must be JSON, with same name as directory
 You can then iterate through collection ("tags: post") with a "{%for%}" loop.
@@ -8,3 +8,8 @@ For-loop has to use name of instance (e.g. post) of the collection it is iterati
 - 11ty collections, 11ty data cascades, 11ty for loops
 - links:
   https://11ty.rocks/posts/creating-and-using-11ty-collections/
+
+
+# permalink: "/posts/{{ title | slugify }}/index.html"
+Tells 11ty to write post into the given path, using the title (indicated in the post's frontmatter) that will be slugified: First Post -> first-post
+The path needs to have a file extension for 11ty to write it.

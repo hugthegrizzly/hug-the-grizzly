@@ -5,7 +5,7 @@ media:
 content:
   - name: posts
     label: Posts
-    path: src/blog
+    path: src/posts
     type: collection
     fields:
       - name: thumbnail

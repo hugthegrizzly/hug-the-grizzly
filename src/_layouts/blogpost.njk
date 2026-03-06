@@ -5,6 +5,7 @@ layout: base.njk
 <a class="section-heading" href="/">
   Back to <span class="hyperlink">Posts</span>
 </a>
+
 <section>
   <article>
     <h3> {{ title }}</h3>
@@ -13,6 +14,9 @@ layout: base.njk
       <li class="tag"><a>Blog</a></li>
       <li class="tag"> {{ date | postDate }} </li>
     </ul>
-    {{ content | safe }}
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+    
   </article>
 </section>
