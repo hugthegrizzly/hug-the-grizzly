@@ -1,5 +1,5 @@
 ---
-thumbnail: _public/assets/blog/first-post/thumbnail-placeholder.png
+thumbnail: /assets/blog/first-post/thumbnail-placeholder.png
 date: 2026-03-06
 title: Spongebub
 published: false

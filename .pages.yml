@@ -1,6 +1,6 @@
 media:
   input: src/assets
-  output: _public/assets
+  output: assets
 
 content:
   - name: posts
@@ -20,29 +20,10 @@ content:
       - name: published
         label: Published
         type: boolean
-        default: false
+        default: true
       - name: description
         label: Blurb
         type: string
       - name: body
         label: Body
         type: rich-text
-
-components:
-  - hero: # 'hero' is the component name/key
-    label: Hero Section
-    type: object
-    fields:
-      - name: headline
-        label: Headline
-        type: text
-        required: true
-      - name: cover
-        label: Cover Image
-        type: image
-    email: # 'email' is the component name/key
-    label: Email Address
-    type: string
-    pattern:
-      regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-      message: 'This must be a valid email address (e.g. hello@example.com).'
