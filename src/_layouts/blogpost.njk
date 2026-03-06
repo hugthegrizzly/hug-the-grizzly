@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name = "description" content="Blog about art and games"/>
     <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
-    <title> First Blogpost</title>
+    <title> {{ title }}</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/assets/htg-flower-favicon.svg">
 
@@ -35,24 +35,13 @@
         </a>
         <section>
           <article>
-            <h3> First Blogpost</h3>
-            <img src="/assets/blog/first-post/thumbnail.jpg" role="thumb" />
+            <h3> {{ title }}</h3>
+            <img src="{{ thumbnail }}" role="thumb" />
             <ul class="tagline">
               <li class="tag"><a>Blog</a></li>
-              <li class="tag"> 19 Jan 2026 </li>
+              <li class="tag"> {{ displayDate }} </li>
             </ul>
-            <p>Hi!</p>
-<p>Welcome to my first blogpost. This blogpost is actually a test, to
-help me code the layout. I currently don't have a framework or a
-CMS installed, so we are hard-coding this business.</p>
-<p>This means that line breaks have to be added manually. Paragraphs
-split up in lines of code.</p>
-<p>Here is a picture of a cute cat.</p>
-<p><img src="https://www.boredpanda.com/blog/wp-content/uploads/2024/01/6595640d9e5bf_lxpx1vbw0rub1__700.jpg" alt="Cute cat">
-This code is the most messiest bowl of spaghetti you can think of.
-But at least it's spaghetti, and not fine, thin strands of yarn;
-those are pretty impossible to detangle once forced into a knot.</p>
-
+            {{ content | safe }}
           </article>
         </section>
       </main>

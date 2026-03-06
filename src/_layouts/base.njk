@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name = "description" content="Blog about art and games"/>
+    <meta name="keywords" content="gaming, art, crafts, blog, reviews, 3D, guide"/>
+    <title>Hug the Grizzly &#8211; Blog</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/htg-flower-favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/> <!-- Swiper.js CDN link-->
+
+  </head>
+
+  <body>
+    <div id="nav-mobile">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="#">Art</a></li>
+      <li><a class="current-page" href="#">Posts</a></li>
+      <li><a href="#">About</a></li>
+    </div>
+
+    <header id="topbar">
+      <button id="nav-menu" onclick="openNav()"></button>
+      <div class="banner">
+        <img src="/assets/htg-flower-logo.svg" />
+        <h1>Hug the Grizzly</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        {{ content | safe }}
+      </main>
+
+      <footer>
+        <div class="top">
+          <img src="/assets/htg-flower-logo.svg"/>
+        </div>
+        <ul>
+          <li><a href="https://www.instagram.com/hug_the_grizzly" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@kamshifter" target="_blank">YouTube</a></li>
+          <li><a href="https://www.twitch.tv/kamshifter" target="_blank">Twitch</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    function openNav() {
+      var mobile_menu = document.getElementById("nav-mobile")
+      var topbar = document.getElementById("topbar")
+      if (mobile_menu.style.display == "" ||  mobile_menu.style.display == "none") {
+        mobile_menu.style.display = "flex";
+        topbar.style.boxShadow = "none";
+        playAudio();
+      }
+      else {
+        mobile_menu.style.display = "none";
+        topbar.style.boxShadow = "0px 0px 36px rgba(0, 0, 0, 0.35)";
+      }
+    }
+    function playAudio() {
+      var menu_sfx = new Audio("/assets/audio/menu-click.mp3")
+      menu_sfx.play();
+    }
+  </script>
+  
+  <!-- Swiper.js script-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> 
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+</html>
