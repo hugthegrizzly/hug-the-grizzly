@@ -39,7 +39,7 @@
             <img src="{{ thumbnail }}" role="thumb" />
             <ul class="tagline">
               <li class="tag"><a>Blog</a></li>
-              <li class="tag"> {{ displayDate }} </li>
+              <li class="tag"> {{ date | postDate }} </li>
             </ul>
             {{ content | safe }}
           </article>

@@ -2,7 +2,7 @@
 title: First Blogpost
 layout: blogpost.njk
 thumbnail: /assets/blog/first-post/thumbnail.jpg
-displayDate: 19 Jan 2026
+date: 2026-01-19
 ---
 Hi!
 
