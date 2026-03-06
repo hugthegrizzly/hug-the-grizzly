@@ -1,0 +1,10 @@
+Learning notes for the "blog" directory
+
+# "blog.json"
+Creating an 11ty collection that applies (tags) to all files in directory
+Must be JSON, with same name as directory
+You can then iterate through collection ("tags: post") with a "{%for%}" loop.
+For-loop has to use name of instance (e.g. post) of the collection it is iterating through (tags: post)
+- 11ty collections, 11ty data cascades, 11ty for loops
+- links:
+  https://11ty.rocks/posts/creating-and-using-11ty-collections/

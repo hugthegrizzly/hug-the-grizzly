@@ -1,18 +1,21 @@
-module.exports = function(eleventyConfig) {
+const { DateTime } = require("luxon"); // Import Luxon plugin to reformat dates
+module.exports = function(eleventyConfig) { // Function to export src into public
 
-    eleventyConfig.addPassthroughCopy("src/style.css");
+    // Include these folders in public export
+    eleventyConfig.addPassthroughCopy("src/style.css"); 
     eleventyConfig.addPassthroughCopy("src/assets");
-    eleventyConfig.addFilter("postDate", dateObj => {
-        return DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy')
+
+    eleventyConfig.addFilter("postDate", (dateObj) => { // Add custom 11ty filter to reformat dates (using Luxon)
+        return DateTime.fromJSDate(dateObj).toFormat('d LLL yyyy') // Take YAML date and format it
     })
 
     return {
 
         dir: {
-        input: 'src',
-        output: '_public',
-        includes: '_partials',
-        layouts: '_layouts',
+            input: 'src', // Source site
+            output: '_public', // Public site export
+            includes: '_partials', // Partials AKA components/slices/snippets
+            layouts: '_layouts', // Layouts AKA templates
         }
     };
 

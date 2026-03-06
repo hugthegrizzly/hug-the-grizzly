@@ -172,6 +172,12 @@ main {
   border-radius: 20px;
   margin-bottom: 20px;
 }
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .hyperlink {
   color: #e194ff;
 }

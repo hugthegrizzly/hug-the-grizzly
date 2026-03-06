@@ -1,6 +1,6 @@
 ---
-title: First Blogpost
-layout: blogpost.njk
+title: "First Blogpost"
+description: "You're here early, this site is under construction. Come back soon :D"
 thumbnail: /assets/blog/first-post/thumbnail.jpg
 date: 2026-01-19
 ---
